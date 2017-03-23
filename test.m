@@ -1,3 +1,6 @@
+%% build the file names txt file
+%get the names from the folder
+
 %get the database and the fnames
 db = file2array('database.txt');
 fnames = file2array('fnames.txt');
@@ -27,3 +30,5 @@ updatedNames = fnames;
 updatedNames(fnameFolderIndex, :) = db(fnameDBIndex, :);
 st = table(char(updatedNames));
 writetable(st,'updatedNames.txt', 'WriteVariableNames', false);
+
+%% change the file names inside the folder
