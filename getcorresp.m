@@ -9,7 +9,8 @@ function mat = getcorresp(fnames, db)
     [numrows, ~] = size(db);
     
     %corresp. for each row in fname
-    for t=1:numrows
-       mat(t, :) = [t, getmaxscore(fnames, db, numrows)]; 
+    for t=1:row
+        [dbIndex, score] = getmaxscore(fnames(t, :), db, numrows);
+       mat(t, :) = [t, dbIndex, score]; 
     end
 end
