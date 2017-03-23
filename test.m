@@ -1,4 +1,5 @@
 %test file
+
 fileid = fopen('temp.txt');
 a = textscan(fileid, '%s');
 fclose(fileid);
