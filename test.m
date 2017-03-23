@@ -1,12 +1,17 @@
-%test file
+%get the database and the fnames
+db = file2array('database.txt');
+fnames = file2array('fnames.txt');
 
-fileid = fopen('temp.txt');
-a = textscan(fileid, '%s');
-fclose(fileid);
+%get the correspondance between db and fnames
+% corr = [fnameIndex, dbIndex, score] 
+corr = getcorresp(fnames, db);
 
-c = cell2mat(a{:});
-c = c(:, 1:end-4);
+%remove the value rows with score 20
+log = corr(corr(:, 3) ~= 20, :);
 
-t = c(1, :)
+%% output a log file
+%put the log in table format
 
-score = getmaxscore(t, c, 5);
+%output the result in a text file
+
+%output the result in a pdf file
