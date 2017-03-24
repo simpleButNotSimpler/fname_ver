@@ -1,3 +1,12 @@
+%%build test images
+for t=1:100
+   im = randi(255, 10);
+   
+end
+
+
+
+
 %% build the file names txt file
 %create the 'fnames.txt' file
 % list = dir('files/*.rtf');
