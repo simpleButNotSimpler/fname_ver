@@ -1,0 +1,1 @@
+fnameFolderIndex|detectedName|fnameDBIndex|correctedName|score

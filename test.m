@@ -1,19 +1,10 @@
-%%build test images
-for t=1:100
-   im = randi(255, 10);
-   
-end
-
-
-
-
 %% build the file names txt file
-%create the 'fnames.txt' file
-% list = dir('files/*.rtf');
-% fn = {list.name};
-% fn = fn';
-% fn = cell2table(fn);
-% writetable(fn,'fnames.txt', 'WriteVariableNames', false);
+% create the 'fnames.txt' file
+list = dir('testim/*.bmp');
+fn = {list.name};
+fn = fn';
+fn = cell2table(fn);
+writetable(fn,'fnames.txt', 'WriteVariableNames', false);
 
 
 %get the database and the fnames
@@ -51,3 +42,10 @@ writetable(st,'updatedNames.txt', 'WriteVariableNames', false);
 
 
 %% change the file names inside the folder
+% a ='C:\Users\kkmlover\Documents\DJIMY\WORK\fname_ver\testim\';
+% A =dir( fullfile(a, '*.bmp') );
+% fileNames = { A.name };
+% for iFile = 1 : numel( A )
+%   newName = fullfile(a, strcat(updatedNames(iFile, :), '.bmp') );
+%   movefile( fullfile(a, fileNames{ iFile }), newName );    
+% end 
