@@ -3,9 +3,6 @@ function mat = file2array(pathname)
     % and put it into a char array
 
     fileid = fopen(pathname);
-    a = textscan(fileid, '%s');
+    mat = textscan(fileid, '%s');
     fclose(fileid);
-
-    mat = cell2mat(a{:});
-    mat = mat(:, 1:end-4);
 end

@@ -1,1 +1,16 @@
-fnameFolderIndex|detectedName|fnameDBIndex|correctedName|score
+# of read files:16 
+# of incorrect file names:3 
+# of correction attempted:3 
+# of correction succeeded:2 
+# of correction failed:1 
+
+
+			sucessfull attempts
+erronous_names            corrected_names          score
+00022_4E58_51E1_4E39_0.bmp  00022_4E38_51E1_4E39_0.bmp 16
+00199_5409_507A_507D_0.bmp  00199_5009_507A_507D_0.bmp 16
+
+
+			unsucessfull attempts
+erronous_names
+           noulatout.bmp
